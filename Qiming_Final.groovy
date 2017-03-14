@@ -7,12 +7,22 @@ import com.github.stuxuhai.jpinyin.*
 
 class Constants {
 
+	//输出文件
 	final static OUTPUT_FILE_NAME = 'output.txt'
-	final static CHAR_2_FILE_NAME = '2.txt'		//第二个字
-	final static CHAR_3_FILE_NAME = '3.txt'		//第三个字
-	final static EXCEPT_FILE_NAME = 'except.txt'//要排除的字放在except.txt，当然你也可以直接在2.txt和3.txt删除
-	final static FAMILY_NAME = '胡'				//姓
 
+	//包含第二个字的文件
+	final static CHAR_2_FILE_NAME = '2.txt'
+
+	//包含第三个字的文件
+	final static CHAR_3_FILE_NAME = '3.txt'
+
+	//要排除的字放在except.txt，当然你也可以直接在2.txt和3.txt删除
+	final static EXCEPT_FILE_NAME = 'except.txt'
+
+	//姓
+	final static FAMILY_NAME = '胡'
+
+	//姓的拼音，如果取得不对可以自己hardcode
 	final static FAMILY_NAME_IN_PINYIN = PinyinHelper.convertToPinyinArray(Constants.FAMILY_NAME as char, PinyinFormat.WITH_TONE_NUMBER)
 
 }
@@ -66,15 +76,15 @@ def checkByPinYin(s) {
 	//以下为胡姓谐音避讳专用
 	//忌讳的发音，可以看这里 https://www.zhihu.com/question/27715665/answer/38170553
 	def avoidCharcters = [
-		'li', //狐狸
-		'shuo', //胡说
-		'luo', //胡萝卜
-		'zi', //胡子
-		'tu', //糊涂
-		'jing', //狐精
-		'peng', //狐朋狗友
-		'ou', //狐臭
-		'yan' //胡言乱语
+			'li', //狐狸
+			'shuo', //胡说
+			'luo', //胡萝卜
+			'zi', //胡子
+			'tu', //糊涂
+			'jing', //狐精
+			'peng', //狐朋狗友
+			'ou', //狐臭
+			'yan' //胡言乱语
 
 	]
 
